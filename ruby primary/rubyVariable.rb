@@ -109,4 +109,15 @@ object = Example.new()
 object.show
 
 
+# ruby为变量
+=begin
+
+self:当前方法的接收器对象
+true:代表true的值
+false:代表false的值
+nil:代表undefined的值
+__FILE__:当前源文件的名称
+——LINE__:当前行在源文件中的编号
+
+
 
