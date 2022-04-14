@@ -62,12 +62,55 @@ cust2.display_details
 # ruby 类变量
 ## 类变量必须初始化后才能在方法定义中使用
 
+class Box
+   # 构造器方法
+   def initialize(w,h)
+      @width, @height = w, h
+   end
+ 
+   # 访问器方法
+   def getWidth
+      @width
+   end
+   def getHeight
+      @height
+   end
+ 
+   # 设置器方法
+   def setWidth=(value)
+      @width = value
+   end
+   def setHeight=(value)
+      @height = value
+   end
+end
+
+
+
 class Customer 
 	@@no_of_customers = 0
+
+	def no_of_customers
+		@@no_of_customers
+	end
+
+	def no_of_customers=(value)
+		@@no_of_customers = value
+	end 
+
+
 	def initialize(id , name , addr)
 		@cust_id = id 
 		@cust_name = name
 		@cust_addr = addr
+	end 
+
+	def cust_id 
+		@cust_id
+	end 
+
+	def cust_id=(value)
+		@cust_id = value
 	end 
 
 	def display_details()
@@ -80,14 +123,24 @@ class Customer
 		@@no_of_customers += 1
 		puts "Total number of customers: #@@no_of_customers"
 	end 
-end 
+end
 
 
 cust1 = Customer.new("1", "John","Wisdom Apartments, Ludhiya")
 cust2 = Customer.new("2", "Poul", "New Empire road, Khandala")
 
+
+puts cust2.no_of_customers 
+cust2.no_of_customers = 100
+puts cust2.no_of_customers 
+
 cust2.totol_no_of_customers
 cust2.totol_no_of_customers
+
+
+cust1.cust_id = 3
+puts cust1.cust_id
+
 
 
 # ruby 局部变量
@@ -119,5 +172,5 @@ nil:代表undefined的值
 __FILE__:当前源文件的名称
 ——LINE__:当前行在源文件中的编号
 
-
+=end
 

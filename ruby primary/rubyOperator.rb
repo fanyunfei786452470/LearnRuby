@@ -178,5 +178,10 @@ puts Inside_one::CONST
 puts Inside_one::CONST.call + Inside_two::CONST
 
 
+# ruby 运算符的优先级
+
+
+
+
 
 
