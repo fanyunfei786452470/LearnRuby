@@ -190,14 +190,16 @@ rescue
 	retry #重新从begin 开始
 end 
 
+注意：1.9以及之后的版本不支持在循环中使用retry。
+
 =end
 
 puts "retry"
 
-# for i in 1 .. 5
-# 	# puts i 
-# 	retry if i > 1
-# 	puts "局部变量的值为#{i}"
-# end 
+for i in 1 .. 5
+	# puts i 
+	retry if i > 1
+	puts "局部变量的值为#{i}"
+end 
 
 
